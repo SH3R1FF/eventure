@@ -1,6 +1,8 @@
 import NavLink from "@/components/NavLink";
+import ThemeMode from "@/components/ThemeMode";
 import { UserButton } from "@clerk/nextjs";
 import { CalendarRangeIcon } from "lucide-react";
+
 
 export default function PrivateLayout({children}: { children: React.ReactNode}) {
     return (
@@ -13,13 +15,16 @@ export default function PrivateLayout({children}: { children: React.ReactNode}) 
                     </div>
                     <NavLink href="/events">Events</NavLink>
                     <NavLink href="/schedule">Schedule</NavLink>
-                    <div className="ml-auto size-10">
-                        <UserButton 
-                            appearance={{
-                                elements: {
-                                    userButtonAvatarBox: "size-full"}
-                            }}
-                        />
+                    <div className="ml-auto flex items-center gap-4">
+                        <ThemeMode />
+                        <div className="size-8">
+                            <UserButton 
+                                appearance={{
+                                    elements: {
+                                        userButtonAvatarBox: "size-full"}
+                                    }}
+                                    />
+                        </div>
                     </div>
                 </nav>
             </header>
