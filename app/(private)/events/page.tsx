@@ -35,7 +35,7 @@ const EventsPage = async () => {
         </Button>
       </div>
       {events.length > 0 ? (
-        <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(400px,1fr))] mx-auto">
+        <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(400px,1fr))] mx-auto">
           {events.map(event => (
             <EventCard key={event.id} {...event} />
           ))}
